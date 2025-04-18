@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Time Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #0366d6;
+            margin-bottom: 1rem;
+        }
+        #time {
+            font-size: 2rem;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        p {
+            color: #586069;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Pages Demo</h1>
+        <div id="time">Loading time...</div>
+        <p>This page is being hosted on GitHub Pages</p>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('time');
+            timeElement.textContent = now.toLocaleTimeString();
+        }
+
+        // Update time immediately
+        updateTime();
+        
+        // Then update every second
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
